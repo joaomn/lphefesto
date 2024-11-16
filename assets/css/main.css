@@ -19,7 +19,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #d8faf2; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #283d50; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #007bff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -596,12 +596,13 @@ h6 {
 .footer h4 {
   font-size: 16px;
   font-weight: bold;
-  position: relative;
   padding-bottom: 12px;
 }
 
 .footer .footer-links {
   margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer .footer-links ul {
@@ -826,10 +827,12 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
+  padding: 50px;
 }
+
+
 
 @media (max-width: 1199px) {
 
@@ -884,7 +887,9 @@ padding: 12px;
 }
 
 
-
+#loom-companion-mv3{
+  padding: none;
+}
 
 @media (max-width: 1200px) {
   .hero {
@@ -1419,6 +1424,7 @@ padding: 12px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  max-height: 160px;
 }
 
 @media (max-width: 1024px) {

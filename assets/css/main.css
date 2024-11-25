@@ -19,7 +19,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #d8faf2; /* Background color for the entire website, including individual sections */
+  --background-color: #e9fffade; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #283d50; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #007bff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -1424,19 +1424,25 @@ padding: 12px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  max-height: 160px;
+  width: 160px; /* Define uma largura fixa para a imagem */
+  height: 160px; /* Define uma altura fixa para a imagem */
 }
 
 @media (max-width: 1024px) {
   .team .member .member-img {
     margin: 0 60px;
+    width: 140px; /* Ajuste da largura para telas menores */
+    height: 140px; /* Ajuste da altura para telas menores */
   }
 }
 
 .team .member .member-img img {
   position: relative;
   z-index: 1;
-  
+  width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+  height: 100%; /* Faz a imagem ocupar toda a altura do contêiner */
+  object-fit: cover; /* Faz com que a imagem cubra o contêiner sem ser esticada */
+  object-position: center; /* Garante que o centro da imagem fique visível */
 }
 
 .team .member .member-img .social {
@@ -1465,7 +1471,8 @@ padding: 12px;
 }
 
 .team .member .member-info {
-  margin-top: 30px;
+  margin-top: 20px; /* Reduzir o espaço entre a imagem e o texto */
+  text-align: center; /* Garante que o texto (nome e cargo) fique centralizado */
 }
 
 .team .member .member-info h4 {
@@ -1485,6 +1492,15 @@ padding: 12px;
 .team .member .member-info p {
   margin-bottom: 0;
   font-size: 14px;
+}
+
+.team .member {
+  display: flex;
+  flex-direction: column; /* Organiza as fotos e as informações em coluna */
+  align-items: center; /* Garante que a foto e o texto fiquem centralizados */
+  justify-content: center;
+  text-align: center;
+
 }
 
 .team .member:hover .member-img .social {
@@ -1800,3 +1816,4 @@ padding: 12px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin-bottom: 0;
 }
+
